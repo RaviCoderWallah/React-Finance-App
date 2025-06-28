@@ -2,6 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import ContentHeader from "../components/UI/ContentHeader";
 import OverviewSummaryCard from "../components/UI/OverviewSummaryCard";
 import OverviewPots from "../components/Overview/OverviewPots";
+import OverviewTransactions from "../components/Overview/OverviewTransactions";
 
 const Overview = () => {
   const data = useOutletContext();
@@ -21,12 +22,10 @@ const Overview = () => {
         <OverviewSummaryCard amount={dataBalance.expenses} name="Expenses" />
       </div>
 
-      <div className="grid md:grid-cols-5">
-        <div className="bg-white md:col-span-3 py-6 px-4 rounded-2xl">
-          <OverviewPots />
-        </div>
-        <div>
-
+      <div className="grid md:grid-cols-5 gap-8">
+        <div className="md:col-span-3 grid gap-8">
+          <div className=" bg-white py-6 px-4 rounded-2xl"><OverviewPots /></div>
+          <div className="bg-white py-6 px-4 rounded-2xl"><OverviewTransactions/></div>
         </div>
       </div>
     </div>

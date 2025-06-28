@@ -1,8 +1,4 @@
-import React from "react";
-
 const OverviewPotsCard = ({ data }) => {
-    console.log(data.theme);
-
     return (
         <div className="relative mr-5">
             <div

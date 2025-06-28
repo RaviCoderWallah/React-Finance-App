@@ -23,9 +23,9 @@ const PageLayout = () => {
   }, [])
 
   return (
-    <div className="md:grid md:grid-cols-5 min-h-[100vh] bg-[var(--color-beige-100)]" id="finance-app">
+    <div className="grid md:grid-cols-5 min-h-[100vh] bg-[var(--color-beige-100)]" id="finance-app">
       <SideBar />
-      <main className="col-span-4 md:p-10" id="content">
+      <main className="md:col-span-4 md:p-10" id="content">
         <Outlet context={finaceAppData} />
       </main>
     </div>

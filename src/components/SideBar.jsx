@@ -3,32 +3,34 @@ import SideBarButton from "./UI/SideBarButton"
 
 const SideBar = () => {
 
+  const navLinkClass = ({ isActive }) => isActive ? "bg-white md:pl-5 flex items-center justify-center md:justify-start text-black font-semibold py-2 md:rounded-tr-xl md:rounded-br-xl rounded-sm p-2" : "flex items-center justify-center md:justify-start  md:pl-2 p-2 py-2 text-[color:var(--color-grey-300)] hover:bg-[#3f3f3f8b] hover:md:rounded-tr-xl hover:md:rounded-br-xl rounded-sm";
+
   return (
-    <nav className="bg-[var(--color-grey-900)] h-full md:col-span-1 row-start-1 rounded-tr-2xl rounded-br-2xl " id="sidebar">
-      <div className="pr-8">
-        <div className="flex items-center justify-center pt-10 pb-8 " id="sidebar-logo">
+    <nav className="bg-[var(--color-grey-900)] md:h-full sm:h-[100px]   md:col-span-1 row-start-1 rounded-tl-sm rounded-tr-sm md:rounded-tr-2xl md:rounded-br-2xl" id="sidebar">
+      <div className="md:pr-8">
+        <div className="md:flex items-center justify-center pt-10 pb-8 hidden  " id="sidebar-logo">
           <img src="/public/images/logo-large.svg" alt="web logo" />
         </div>
-        <div className="flex md:flex-col md:gap-6 gap-4 flex-row pt-8" id="navigation-buttons">
+        <div className="md:flex md:flex-col md:gap-6 gap-4 justify-between grid grid-cols-5 md:pt-8 py-2" id="navigation-buttons">
 
-          <NavLink to="/" className={({ isActive }) => isActive ? "bg-white pl-5 text-black font-semibold py-2 rounded-tr-xl rounded-br-xl" : "pl-5 py-2 text-[color:var(--color-grey-300)] hover:bg-[#3f3f3f8b] hover:rounded-tr-xl hover:rounded-br-xl"}>
+          <NavLink to="/" className={navLinkClass}>
             <SideBarButton name="Overview" image="/public/images/icon-nav-overview.svg" />
           </NavLink>
 
 
-          <NavLink to="/transactions" className={({ isActive }) => isActive ? "bg-white pl-5 text-black font-semibold py-2 rounded-tr-xl rounded-br-xl" : "pl-5 py-2 text-[color:var(--color-grey-300)] hover:bg-[#3f3f3f8b] hover:rounded-tr-xl hover:rounded-br-xl"}>
+          <NavLink to="/transactions" className={navLinkClass}>
             <SideBarButton name="Transactions" image="/public/images/icon-nav-transactions.svg" />
           </NavLink>
 
-          <NavLink to="/budgets" className={({ isActive }) => isActive ? "bg-white pl-5 text-black font-semibold py-2 rounded-tr-xl rounded-br-xl" : "pl-5 py-2 text-[color:var(--color-grey-300)] hover:bg-[#3f3f3f8b] hover:rounded-tr-xl hover:rounded-br-xl"}>
+          <NavLink to="/budgets" className={navLinkClass}>
             <SideBarButton name="Budgets" image="/public/images/icon-nav-budgets.svg" />
           </NavLink>
 
-          <NavLink to="/pots" className={({ isActive }) => isActive ? "bg-white pl-5 text-black font-semibold py-2 rounded-tr-xl rounded-br-xl" : "pl-5 py-2 text-[color:var(--color-grey-300)] hover:bg-[#3f3f3f8b] hover:rounded-tr-xl hover:rounded-br-xl"}>
+          <NavLink to="/pots" className={navLinkClass}>
             <SideBarButton name="Pots" image="/public/images/icon-nav-pots.svg" />
           </NavLink>
 
-          <NavLink to="/recurring" className={({ isActive }) => isActive ? "bg-white pl-5 text-black font-semibold py-2 rounded-tr-xl rounded-br-xl" : "pl-5 py-2 text-[color:var(--color-grey-300)] hover:bg-[#3f3f3f8b] hover:rounded-tr-xl hover:rounded-br-xl"}>
+          <NavLink to="/recurring" className={navLinkClass}>
             <SideBarButton name="Recurring Bills" image="/public/images/icon-nav-recurring-bills.svg" />
           </NavLink>
 

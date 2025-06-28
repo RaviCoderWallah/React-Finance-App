@@ -1,8 +1,7 @@
-import { useOutletContext } from "react-router-dom"
 
 const Budgets = () => {
-  const data = useOutletContext();
-  console.log(data);
+  // const data = useOutletContext();
+  // console.log(data);
   
   return (
     <div>
