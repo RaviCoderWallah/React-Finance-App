@@ -6,8 +6,8 @@ const SideBar = () => {
   return (
     <nav className="bg-[var(--color-grey-900)] h-full md:col-span-1 row-start-1 rounded-tr-2xl rounded-br-2xl " id="sidebar">
       <div className="pr-8">
-        <div className="flex items-center justify-center py-4" id="sidebar-logo">
-          <h1 className="text-white text-3xl font-extrabold hidden md:block">finance</h1>
+        <div className="flex items-center justify-center pt-10 pb-8 " id="sidebar-logo">
+          <img src="/public/images/logo-large.svg" alt="web logo" />
         </div>
         <div className="flex md:flex-col md:gap-6 gap-4 flex-row pt-8" id="navigation-buttons">
 
