@@ -3,11 +3,9 @@ import SideBar from "../components/SideBar"
 
 const PageLayout = () => {
   return (
-    <div id="finance-app">
-        <>
-          <SideBar/>
-          <Outlet/>
-        </>
+    <div className="md:grid md:grid-cols-4 md:gap-12 gap-6 min-h-[100vh]" id="finance-app">
+      <SideBar />
+      <Outlet />
     </div>
   )
 }
