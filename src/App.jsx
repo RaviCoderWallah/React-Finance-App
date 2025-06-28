@@ -1,12 +1,10 @@
-import { NavLink, Outlet } from 'react-router-dom'
 import './App.css'
-import SideBar from './components/SideBar'
+import PageLayout from './Layout/PageLayout.jsx';
 
 function App() {
   return (
    <>
-     <SideBar/>
-     <Outlet/>
+      <PageLayout/>
    </>
   )
 }

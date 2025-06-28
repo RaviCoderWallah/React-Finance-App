@@ -6,12 +6,17 @@ import Budgets from './Pages/Budgets.jsx';
 import Pots from './Pages/Pots.jsx';
 import Transactions from './Pages/Transactions.jsx';
 import RecurringBills from './Pages/RecurringBills.jsx';
+import Overview from './Pages/Overview.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        index: true, 
+        element: <Overview />
+      },
       {
         path: "/budgets",
         element: <Budgets />
@@ -22,11 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/transactions",
-        element: <Transactions/>
+        element: <Transactions />
       },
-            {
+      {
         path: "/recurring",
-        element: <RecurringBills/>
+        element: <RecurringBills />
       },
     ],
   },
