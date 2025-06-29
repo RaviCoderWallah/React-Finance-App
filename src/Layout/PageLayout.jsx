@@ -24,7 +24,7 @@ const PageLayout = () => {
 
   return (
     <div className="grid lg:grid-cols-5 grid-rows-[1fr_auto] lg:grid-rows-none min-h-[100vh] bg-[var(--color-beige-100)]" id="finance-app">
-      <main className="order-1 lg:order-2 lg:col-span-4 lg:p-10 px-4" id="content">
+      <main className="order-1 lg:order-2 lg:col-span-4 lg:p-10 px-4 lg:pb-0 pb-20" id="content">
         <Outlet context={finaceAppData} />
       </main>
       <div className="order-2 lg:order-1 lg:col-span-1">
