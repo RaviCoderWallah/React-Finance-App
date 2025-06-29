@@ -23,12 +23,12 @@ const PageLayout = () => {
   }, [])
 
   return (
-    <div className="grid md:grid-cols-5 grid-rows-[1fr_auto] md:grid-rows-none min-h-[100vh] bg-[var(--color-beige-100)]" id="finance-app">
-      <main className="order-1 md:order-2 md:col-span-4 md:p-10 px-4" id="content">
+    <div className="grid lg:grid-cols-5 grid-rows-[1fr_auto] lg:grid-rows-none min-h-[100vh] bg-[var(--color-beige-100)]" id="finance-app">
+      <main className="order-1 lg:order-2 lg:col-span-4 lg:p-10 px-4" id="content">
         <Outlet context={finaceAppData} />
       </main>
-      <div className="order-2 md:order-1 md:col-span-1">
-        <div className="fixed bottom-0 left-0 w-full md:col-span-1 md:h-screen md:sticky md:top-0 z-50 bg-white shadow-t md:shadow-none">
+      <div className="order-2 lg:order-1 lg:col-span-1">
+        <div className="fixed bottom-0 left-0 w-full lg:col-span-1 lg:h-screen lg:sticky lg:top-0 z-50 bg-white shadow-t lg:shadow-none">
           <SideBar />
         </div>
       </div>

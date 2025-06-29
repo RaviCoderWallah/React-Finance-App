@@ -3,6 +3,9 @@ import ContentHeader from "../components/UI/ContentHeader";
 import OverviewSummaryCard from "../components/UI/OverviewSummaryCard";
 import OverviewPots from "../components/Overview/OverviewPots";
 import OverviewTransactions from "../components/Overview/OverviewTransactions";
+import PieChart from "../components/UI/PieChart";
+import ContentCardHeader from "../components/UI/ContentCardHeader";
+import RecurringBillsCard from "../components/UI/RecurringBillsCard";
 
 const Overview = () => {
   const data = useOutletContext();
@@ -24,10 +27,26 @@ const Overview = () => {
         <OverviewSummaryCard amount={dataBalance.expenses} name="Expenses" />
       </div>
 
-      <div className="grid md:grid-cols-5 gap-8">
-        <div className="md:col-span-3 grid gap-8">
-          <div className=" bg-white py-6 px-4 rounded-2xl"><OverviewPots /></div>
-          <div className="bg-white py-6 px-4 rounded-2xl"><OverviewTransactions data={data} /></div>
+      <div className="grid lg:grid-cols-5 gap-8">
+        <div className="lg:col-span-3 grid gap-8">
+          <div className=" bg-white py-6 px-4 md:rounded-2xl sm:rounded-xl rounded-sm"><OverviewPots /></div>
+          <div className="bg-white py-6 px-4 md:rounded-2xl sm:rounded-xl rounded-sm"><OverviewTransactions data={data} /></div>
+        </div>
+        <div className="lg:col-span-2 md:grid lg:grid-rows-5 gap-8">
+          <div className=" lg:row-span-3 bg-white py-6 px-4 md:rounded-2xl sm:rounded-xl rounded-sm md:h-full">
+            <ContentCardHeader name="Budgets" navigatePage="/budgets" buttonName="View All" />
+            <div className="mt-4">
+              {/* <PieChart /> */}
+            </div>
+          </div>
+          <div className=" lg:row-span-3 bg-white py-6 px-4 md:rounded-2xl sm:rounded-xl rounded-sm">
+            <ContentCardHeader name="Recurring Bills" navigatePage="/recurring" buttonName="See Details" />
+            <div className="flex flex-col gap-8 mt-4">
+              <RecurringBillsCard name="Paid Bills" amount="190" />
+              <RecurringBillsCard name="Paid Bills" amount="190" />
+              <RecurringBillsCard name="Paid Bills" amount="190" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

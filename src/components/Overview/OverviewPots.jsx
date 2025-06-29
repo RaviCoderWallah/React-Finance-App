@@ -16,8 +16,8 @@ const OverviewPots = () => {
             <ContentCardHeader name="Pots" navigatePage="/pots" buttonName="See Details"/>
             <div className="grid md:grid-cols-5 gap-6 mt-6">
 
-                <div className="md:col-span-2 bg-[var(--color-beige-100)] rounded-xl pt-6">
-                    <div className="flex items-center justify-center gap-4">
+                <div className="md:col-span-2 bg-[var(--color-beige-100)] sm:rounded-xl rounded-sm pt-6">
+                    <div className="flex items-center justify-center gap-4 pb-4">
                         <img src="/public/images/icon-pot.svg" alt="pots icons" />
                         <div>
                             <p className="text-[15px] text-slate-600">Total Saved</p>
