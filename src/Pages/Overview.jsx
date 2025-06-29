@@ -16,8 +16,10 @@ const Overview = () => {
   return (
     <div id="overview-page">
       <ContentHeader headingName="Overview" isButton="false" />
-      <div className="grid sm:grid-cols-3 grid-cols-1 gap-6 pt-8 pb-6">
-        <OverviewSummaryCard amount={dataBalance.current} name="Current Balance" bgColor="var(--color-grey-900)" />
+      <div className="grid sm:grid-cols-3 grid-cols-2 gap-6 pt-8 pb-6">
+        <div className="col-span-2 sm:col-span-1">
+          <OverviewSummaryCard amount={dataBalance.current} name="Current Balance" bgColor="var(--color-grey-900)" />
+        </div>
         <OverviewSummaryCard amount={dataBalance.income} name="Income" />
         <OverviewSummaryCard amount={dataBalance.expenses} name="Expenses" />
       </div>
@@ -25,7 +27,7 @@ const Overview = () => {
       <div className="grid md:grid-cols-5 gap-8">
         <div className="md:col-span-3 grid gap-8">
           <div className=" bg-white py-6 px-4 rounded-2xl"><OverviewPots /></div>
-          <div className="bg-white py-6 px-4 rounded-2xl"><OverviewTransactions/></div>
+          <div className="bg-white py-6 px-4 rounded-2xl"><OverviewTransactions data={data} /></div>
         </div>
       </div>
     </div>
